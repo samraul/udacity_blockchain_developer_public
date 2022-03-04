@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fair Trade Coffee</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">Fair Trade Coffee</h1>
+        <hr>
+        <p style="text-align: center;">Prove the authenticity of coffee using the Ethereum blockchain.</p>
+    </div>
+
+    <div id="ftc-harvest">
+        
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                                                ITEM DATA FETCH
+          - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <fieldset class="form-group">
+            <legend>Data Fetch Form</legend>
+            <label for="fetch-input-upc">UPC: </label><input class="fetch-input-field" type="number" id="fetch-input-upc" name="fetch-input-upc" value=1><br>
+            
+            <table>
+                <tr>
+                    <td><button class="btn-fetchOne" id="button" type="button" data-id="9">Fetch Data 1</button></td>
+                    <td><button class="btn-fetchTwo" id="button" type="button" data-id="10">Fetch Data 2</button></td>
+                </tr>
+                <tr>
+                <td>
+                    <fieldset class="fetch-group fetch-group-w-height">                        
+                        <label class="fetch-label" for="fetch-sku">SKU</label><input readonly class="fetch-field" type="text" id="fetch-sku" name="fetch-sku" value=Unknown><br>
+                        <label class="fetch-label" for="fetch-upc">UPC</label><input readonly class="fetch-field" type="text" id="fetch-upc" name="fetch-upc" value="Unknown"><br>
+                        <label class="fetch-label" for="fetch-ownerID">Current Owner ID</label><input readonly class="fetch-field" type="text" id="fetch-ownerID" name="fetch-ownerID" value="Unknown"><br>
+                        <label class="fetch-label" for="fetch-originFarmerID">Farmer ID</label><input readonly class="fetch-field" type="text" id="fetch-originFarmerID" name="fetch-originFarmerID" value="Unknown"><br>
+                        <label class="fetch-label" for="fetch-originFarmName">Farm Name</label><input readonly class="fetch-field" type="text" id="fetch-originFarmName" name="fetch-originFarmName" value="Unknown"><br>
+                        <label class="fetch-label" for="fetch-originFarmInformation">Farm Information</label><input readonly class="fetch-field" type="text" id="fetch-originFarmInformation" name="fetch-originFarmInformation" value="Unknown"><br>
+                        <label class="fetch-label" for="fetch-originFarmLatitude">Farm Latitude</label><input readonly class="fetch-field" type="text" id="fetch-originFarmLatitude" name="fetch-originFarmLatitude" value="Unknown"><br>
+                        <label class="fetch-label" for="fetch-originFarmLongitude">Farm Longitude</label><input readonly class="fetch-field" type="text" id="fetch-originFarmLongitude" name="fetch-originFarmLongitude" value="Unknown"><br>                        
+                    </fieldset>
+                </td>
+                <td>
+                    <fieldset class="fetch-group fetch-group-w-height">
+                        <label class="fetch-label" for="fetch-sku-2">SKU</label><input readonly class="fetch-field" type="text" id="fetch-sku-2" name="fetch-sku-2" value=Unknown><br>
+                        <label class="fetch-label" for="fetch-upc-2">UPC</label><input readonly class="fetch-field" type="text" id="fetch-upc-2" name="fetch-upc-2" value="Unknown"><br>
+                        <label class="fetch-label" for="fetch-productID">Product ID</label><input readonly class="fetch-field" type="text" id="fetch-productID" name="fetch-productID" value="Unknown"><br>
+                        <label class="fetch-label" for="fetch-productNotes">Product Notes</label><input readonly class="fetch-field" type="text" id="fetch-productNotes" name="fetch-productNotes" value="Unknown"><br>
+                        <label class="fetch-label" for="fetch-productPrice">Product Price</label><input readonly class="fetch-field" type="text" id="fetch-productPrice" name="fetch-productPrice" value="Unknown"><br>
+                        <label class="fetch-label" for="fetch-itemState">Item State</label><input readonly class="fetch-field" type="text" id="fetch-itemState" name="fetch-itemState" value="Unknown"><br>
+                        <label class="fetch-label" for="fetch-distributorID">Distributor ID</label><input readonly class="fetch-field" type="text" id="fetch-distributorID" name="fetch-distributorID" value="Unknown"><br>
+                        <label class="fetch-label" for="fetch-retailerID">Retailer ID</label><input readonly class="fetch-field" type="text" id="fetch-retailerID" name="fetch-retailerID" value="Unknown"><br>
+                        <label class="fetch-label" for="fetch-consumerID">Consumer ID</label><input readonly class="fetch-field" type="text" id="fetch-consumerID" name="fetch-consumerID" value="Unknown"><br>
+                    </fieldset>
+                </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <br>
+
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                                                ACCOUNT PERMISSIONS/ROLES
+          - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <fieldset class="form-group">
+            <legend>Account Roles</legend>
+            
+            <button class="btn-checkAccountPermissions" id="button" type="button" data-id="11">Check Current Account Permissions</button>
+            <fieldset class="fetch-group">                        
+                <label class="fetch-label" for="check-account">Current Account</label><input readonly class="fetch-field" type="text" id="check-account" name="check-account" value="Unknown"><br>
+                <label class="fetch-label" for="check-role-owner">Role: Owner</label><input readonly class="fetch-field" type="checkbox" id="check-role-owner" name="check-role-owner"><br>
+                <label class="fetch-label" for="check-role-farmer">Role: Farmer</label><input readonly class="fetch-field" type="checkbox" id="check-role-farmer" name="check-role-farmer"><br>
+                <label class="fetch-label" for="check-role-dist">Role: Distributor</label><input readonly class="fetch-field" type="checkbox" id="check-role-dist" name="check-role-dist"><br>
+                <label class="fetch-label" for="check-role-retailer">Role: Retailer</label><input readonly class="fetch-field" type="checkbox" id="check-role-retailer" name="check-role-retailer"><br>
+                <label class="fetch-label" for="check-role-consumer">Role: Consumer</label><input readonly class="fetch-field" type="checkbox" id="check-role-consumer" name="check-role-consumer"><br>
+            </fieldset>
+        </fieldset>        
+
+        <br>
+
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                                                FARM DETAILS
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+        <div class=form-break></div>
+        <div class="form-group" style="background-color:rgb(177, 199, 169);">
+
+            <label class="input-label" for="op-input-upc">UPC</label><input class="input-field" type="number" id="op-input-upc" name="op-input-upc" value=0><br>
+
+            <fieldset>           
+                <legend>Farm and Product Details</legend>
+                <label class="input-label" for="farm-input-originFarmName">Farm Name</label><input class="input-field" type="text" id="farm-input-originFarmName" name="farm-input-originFarmName" value="Unknown"><br>
+                <label class="input-label" for="farm-input-originFarmInformation">Farm Information</label><input class="input-field" type="text" id="farm-input-originFarmInformation" name="farm-input-originFarmInformation" value="Unknown"><br>
+                <label class="input-label" for="farm-input-originFarmLatitude">Farm Latitude</label><input class="input-field" type="text" id="farm-input-originFarmLatitude" name="farm-input-originFarmLatitude" value="Unknown"><br>
+                <label class="input-label" for="farm-input-originFarmLongitude">Farm Longitude</label><input class="input-field" type="text" id="farm-input-originFarmLongitude" name="farm-input-originFarmLongitude" value="Unknown"><br>                        
+                <label class="input-label" for="prod-input-prodNotes">Product Notes</label><input class="input-field" type="text" id="prod-input-prodNotes" name="prod-input-prodNotes" value="Unknown"><br>
+                <label class="input-label" for="prod-input-prodPrice">Product Price</label><input class="input-field" type="text" id="prod-input-prodPrice" name="prod-input-prodPrice" value=0><p class="input-label"> (ether)</p><br>
+            </fieldset>
+            <button class="btn-harvest" id="button" type="button" data-id="1">Harvest</button>
+            <button class="btn-process" id="button" type="button" data-id="2">Process</button>
+            <button class="btn-pack" id="button" type="button" data-id="3">Pack</button>
+            <button class="btn-forsale" id="button" type="button" data-id="4">ForSale</button>    
+            <button class="btn-buy" id="button" type="button" data-id="5">Buy</button>
+            <button class="btn-ship" id="button" type="button" data-id="6">Ship</button>
+            <button class="btn-receive" id="button" type="button" data-id="7">Receive</button>
+            <button class="btn-purchase" id="button" type="button" data-id="8">Purchase</button>
+            
+        </div>
+    </div>
+
+    <h2>Transaction History<span id="ftc-history"></span></h2>
+    <div>
+        <button class="btn-fetch-events" id="button" type="button" data-id="12">Fetch All Events</button>
+        <ul id="ftc-events">
+            <!-- Events will appear here from app.js -->
+        </ul>
+        <br>
+        <hr>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="src/js/web3.min.js"></script>
+    <script src="src/js/truffle-contract.js"></script>
+    <script src="src/js/app.js"></script>
+</body>
+
+</html>

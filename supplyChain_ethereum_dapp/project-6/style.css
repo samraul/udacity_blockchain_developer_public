@@ -1,0 +1,120 @@
+body {
+  background-color:#fff;
+  padding: 2em;
+  font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+  color: #212121;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+.bold { 
+  font-weight: bolder;
+}
+
+input {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 10px 0;
+}
+
+button {
+    cursor: pointer;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    background-color: #00BCD4;
+    font-size: 16px;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.sell { 
+  background-color: white;
+  color: #D1C4E9;
+}
+
+.ftc-intro {
+  background-color:#0097A7;
+  color:white;
+  width:100%;
+  padding:20px;
+}
+
+.form-group {
+  background-color:#0097A7;
+  color:black;
+  
+  padding:10px;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+
+  display: table 
+}
+
+.form-break {
+  background-color:#fff;
+  color:white;
+  width:100%;
+  padding:5px;
+}
+
+.horizontal-rule {
+  background-color:#BDBDBD;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*                                    FETCH                                      */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.fetch-input-field {
+  width: 80px;
+  padding: 6px;  
+}
+
+fieldset.fetch-group {
+  clear: both;  
+  border: 1px dotted;  
+  width: fit-content;
+}
+
+fieldset.fetch-group-w-height {
+  height: 450px;
+}
+
+.fetch-label {
+  font-size: small;
+  font-style: italic;
+  text-align: left;  
+  padding-right: 5px;
+  width: 120px;    
+  display: inline-block  
+}
+
+.fetch-field {  
+  width: 320px;
+  padding: 4px;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*                                    INPUT                                      */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.input-label {
+  font-size: small;
+  font-weight: bold;
+  text-align: left;  
+  padding-right: 5px;
+  width: 120px;    
+  display: inline-block  
+}
+
+.input-field {
+  width: 320px;
+  padding: 6px;  
+}
+
