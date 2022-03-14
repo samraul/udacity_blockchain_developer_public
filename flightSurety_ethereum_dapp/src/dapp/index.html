@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>FlightSurety</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+
+    <!-- <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">FlightSurety</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav> -->
+
+    <h1>Flight Surety</h1>
+    <div id="display-wrapper" class="top-20">
+    </div>    
+    <!-- <div id="" class="">
+
+        <label class="form">Flight</label> <input type="text" id="flight-number"> <btn class="btn btn-primary" id="submit-oracle">Submit to Oracles</btn>
+        
+    </div> -->
+
+    <!-- <div id="container-account">
+        <fieldset class="top-group">
+            <legend>User Accounts</legend>
+            <select class="width100" size="5" id="TBD">
+            </select>
+        </fieldset>
+    </div> -->
+    <div id="container-account">
+
+        <fieldset class="top-group">
+            <legend>Passengers</legend>
+            
+            <table class="layout-table width100">
+                <tr>
+                    <td>
+                        <button id="btn-getAvailableFlights" class="fetch" type="button">Get Available Flights</button>
+                    </td>
+                    <td>
+                        <button id="btn-getInsuredFlights" class="fetch" type="button">Refresh Insured Flights</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label class="cell-label">Flights Available For Insurance</label></td>
+                    <td><label class="cell-label">Insured Flights Per Passenger</label></td>
+                </tr>
+                <tr>
+                    <td>
+                        <select class="width100 long-select" size="8" id="availableFlightsList" name="Available Flights">
+                        </select>
+                    </td>
+                    <td>
+                        <select class="width100 long-select" size="8" id="insuredFlightsPerPassengerList" name="Insured Flights Per Passenger">
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="btn-purchaseInsurance" type="button">Insure Passenger on Flight</button>
+                        <input class="form-wei" type="number" id="field-insuranceAmount" name="field-insuranceAmount" size=20 step="0.000000001" value="0.555550000" min="0.000000001" max="1.0">
+                        <label class="form-label" for="field-insuranceAmount">eth</label>
+                    </td>
+                    <td>                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="cell-label">Known passengers</label>
+                    </td>
+                    <td>
+                        <label class="cell-label">Insured Flights</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select class="width100 long-select" size="5" id="knownPassengersList" name="Known Passengers">
+                        </select>                        
+                    </td>
+                    <td>
+                        <select class="width100 long-select" size="8" id="insuredFlightsAggregatedList" name="Insured Flights">
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="btn-queryPassengerCredit" class="fetch" type="button">Query Passenger Credit</button>
+                        <button id="btn-withdrawCredit" type="button">Withdraw Passenger Credit</button>
+                    </td>
+                    <td>
+                        <button id="btn-fetchFlightStatus" type="button">Fetch Flight Status (Submit to Oracles)</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p id="lbl-passengerCredit">Unknown passenger credit.</p>
+                    </td>
+                    <td>
+                    </td>
+                </tr>                
+            </table>
+            
+            
+        </fieldset>         
+        
+    </div>
+    <br>
+    <br>
+    <fieldset class="top-group">
+        <legend>Oracles (for debugging)</legend>
+        
+        <table class="layout-table width100">
+            <tr>
+                <td>                    
+                </td>
+                <td>
+                    <button id="btn-getOracleRequests" class="fetch" type="button">Refresh Oracle Requests</button>                                        
+                </td>
+            </tr>
+            <tr>
+                <td>                    
+                </td>
+                <td>
+                    <label class="cell-label">Oracle Requests</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <select class="width100 long-select" size="5" id="oracleRequestList" name="Oracle Requests">
+                    </select>                        
+                </td>
+            </tr>
+            <tr>
+            </tr>
+        </table>
+        
+        
+    </fieldset>         
+    
+</div>
+<br>
+<br>
+    <div id="container-airline">
+
+        <fieldset class="top-group">
+            <legend>Airlines</legend>
+            
+            <button id="btn-getAirlines" class="fetch" type="button">Refresh Airline Information</button>
+            <hr>
+            <table class="layout-table width100">
+                <tr>
+                    <td><label class="cell-label">Participating Airlines (paid fee)</label></td>
+                    <td><label class="cell-label">Registered Airlines (unpaid fee)</label></td>
+                    <td><label class="cell-label">Candidate Airlines (not consensus approved yet)</label></td>
+                </tr>
+                <tr>
+                    <td>
+                        <select class="width100" size="5" id="participatingAirlinesList" name="Participating Airlines">
+                        </select>
+                    </td>
+                    <td>
+                        <select class="width100" size="5" id="registeredAirlinesList" name="Registered Airlines">
+                        </select>
+                    </td>
+                    <td>
+                        <select class="width100" size="5" id="candidateAirlinesList" name="Candidate Airlines">
+                        </select>                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="btn-registerAirline" type="button">Register Selected Airline</button>
+                    </td>
+                    <td>
+                        <button id="btn-payAirlineFee" type="button">Pay Partipacting Fee</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="1">
+                        <label class="cell-label">Known airlines</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="1">
+                        <select class="width100" size="5" id="knownAirlinesList" name="Known Airlines">
+                        </select>                        
+                    </td>
+                </tr>
+            </table>
+            
+            
+        </fieldset>         
+        
+    </div>
+
+
+</body>
+
+</html>

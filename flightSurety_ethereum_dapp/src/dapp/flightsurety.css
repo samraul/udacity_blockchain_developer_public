@@ -1,0 +1,114 @@
+body {
+
+    background-image: url('flight.jpg'); /*Source: iStockPhoto */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color:#fff;
+
+    padding: 2em;
+    font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+    color: #212121;    
+}
+
+.width100 {
+    width: 100%;
+}
+
+.width30 {
+    width: 33%;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*                                   TAGS                                        */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+legend {
+    background-color: rgba(160, 122, 160, 1.0);
+    border: 1px black solid;
+    margin: 10px;
+    padding: 4px;
+}
+
+button {
+    cursor: pointer;
+    border-radius: 8px;
+    border: 2px solid rgb(95, 0, 99);
+    font-size: 16px;
+    padding: 12px 24px;
+    text-decoration: none;
+    margin: 4px 2px;
+}
+
+button.fetch {
+    background-color: #8bff55;
+}
+
+button:not(fetch) {
+    background-color: #f7af14;
+}
+
+input {
+    font-size: 14px;    
+}
+
+select {
+    font-family: monospace;
+    font-size: medium; 
+    overflow-x:auto;
+    overflow-y:auto;    
+    display: table;
+}
+
+select:not(long-select) {
+    height:102px; /* hardcoded size :( */
+}
+
+select.long-select {
+    height:142px; /* hardcoded size :( */
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*                                CLASSES                                        */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.sticky {
+    position: fixed; 
+    top: 10px;
+    right:18px;
+    margin: 0; 
+    background-color: #fcff4f;   
+    font-size: small;
+    font-style: italic;
+}
+
+.layout-table {
+    table-layout: fixed;
+}
+
+td {
+    border: 2px; 
+}
+
+.cell-label {
+    font-size: medium;
+    font-style: italic bold;
+    text-align: left;  
+    padding-right: 5px;
+}
+
+.top-group {   
+    width: 95%;
+    margin: 0 auto;
+
+    padding:10px;
+    border: 1px solid;
+
+    display: table;
+    background-color: rgba(160, 122, 160, 0.7);
+}
+
+.form-group {
+    clear: both;  
+    border: 1px dotted;  
+    width: fit-content;
+  }  
+
