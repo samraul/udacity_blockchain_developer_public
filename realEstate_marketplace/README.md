@@ -75,11 +75,17 @@ The contract is deployed in the rinkeby testnet, with a storefront present in Op
 
 * Token: `(RSRS) RS Real State Token`. Please note this token has "State", not "Estate" :)
 
-* Contract Address: [0x9df941d40967bef9d04d1cd0322c2217519e4172 (etherscan)](https://rinkeby.etherscan.io/address/0x9df941d40967bef9d04d1cd0322c2217519e4172)
+* SolnSquareVerifier Address: [0x9df941d40967bef9d04d1cd0322c2217519e4172 (etherscan)](https://rinkeby.etherscan.io/address/0x9df941d40967bef9d04d1cd0322c2217519e4172)
+  * See abi down below
+
+* Verifier Address: [0x0f15b878d407bd1e63338a74dc62febccec79bfa (etherscan)](https://rinkeby.etherscan.io/address/0x0f15b878d407bd1e63338a74dc62febccec79bfa)
+  * See abi down below
 
 * OpenSea MarketPlace Storefront: [rs-real-state-token](https://testnets.opensea.io/collection/rs-real-state-token)
 
-* Contract Abi's:
+* OpenSea MarketPlace Activity: [here](https://testnets.opensea.io/collection/rs-real-state-token?tab=activity) you can verify the sale of 5 minted tokens to a secondary account.
+
+* SolnSquareVerifier contract's abi:
 ```
   [
     {
@@ -822,6 +828,62 @@ The contract is deployed in the rinkeby testnet, with a storefront present in Op
         {
           "internalType": "bool",
           "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ]
+```
+
+* Verifier contract's abi:
+
+```
+  [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "s",
+          "type": "string"
+        }
+      ],
+      "name": "Verified",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256[2]",
+          "name": "a",
+          "type": "uint256[2]"
+        },
+        {
+          "internalType": "uint256[2][2]",
+          "name": "b",
+          "type": "uint256[2][2]"
+        },
+        {
+          "internalType": "uint256[2]",
+          "name": "c",
+          "type": "uint256[2]"
+        },
+        {
+          "internalType": "uint256[2]",
+          "name": "input",
+          "type": "uint256[2]"
+        }
+      ],
+      "name": "verifyTx",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "r",
           "type": "bool"
         }
       ],
